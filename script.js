@@ -1,10 +1,10 @@
 (function () {
     
-    function onlyUnique(value, index, self) { 
+    var onlyUnique = function (value, index, self) { 
         return self.indexOf(value) === index;
     }
     
-    function getSelectionText() {
+    var getSelectionText = function () {
         var text = "";
         var elem = document.activeElement;
         console.log(elem.tagName, elem.type);
@@ -41,5 +41,6 @@
             document.activeElement.value = document.activeElement.value + copyText[lastCmd[lastCmd.length - 1]];
         }
         lastCmd = [];
-    })
+    });
+    
 }).call(this);
